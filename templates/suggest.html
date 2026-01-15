@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block title %}Suggest a Resource – City of Miami{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/suggest.css') }}" />
+{% endblock %}
+
+{% block content %}
+<main class="business-page">
+
+  <!-- HERO -->
+  <section class="business-hero">
+    <h1>SUGGEST A RESOURCE</h1>
+  </section>
+
+  <section class="business-layout">
+	
+	<!-- FORM -->
+
+	<div class="comment-form">
+            <div class="error-message" id="errorMessage"></div>
+            <div class="success-message" id="successMessage"></div>
+
+            <form id="commentForm" action="https://api.web3forms.com/submit" method="POST">
+				<input type="hidden" name="access_key" value="3435acb5-c2cf-4c3a-bdca-272828e9f719">
+			
+			    <div class="error-message" id="errorMessage"></div>
+				<div class="success-message" id="successMessage"></div>
+			
+                <div class="form-group">
+                    <label for="resourceName">Name</label>
+                    <input type="text" id="resourceName" name="resourceName" placeholder="Enter the resource's name" maxlength="50" required>
+                </div>
+				<div class="form-group">
+                    <label for="category">Category</label>
+                    <input type="text" id="category" name="category" placeholder="Enter the resource's category" maxlength="50" required>
+                </div>
+				<div class="form-group">
+                    <label for="link">Link</label>
+                    <input type="text" id="link" name="link" placeholder="Enter a link to more information on the resource" maxlength="50" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" placeholder="Write a description here..." required></textarea>
+                </div>
+				<div class="form-group">
+                    <label for="link">Address</label>
+                    <input type="text" id="link" name="link" placeholder="Enter their address (optional)" maxlength="50">
+                </div>
+				<div class="form-group">
+                    <label for="phone-number">Phone Number</label>
+                    <input type="text" id="phone-number" name="phone-number" placeholder="Enter their phone number (optional)" maxlength="50">
+                </div>
+				<div class="form-group">
+                    <label for="link">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter their email (optional)" maxlength="50">
+                </div>
+                <button type="submit" class="submit-button">Share Resource</button>
+            </form>
+    </div>
+
+  </section>
+
+</main>
+{% endblock %}
+
+ <script>
+        document.getElementById('commentForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const errorMsg = document.getElementById('errorMessage');
+            const successMsg = document.getElementById('successMessage');
+            const username = document.getElementById('username').value.trim();
+            const comment = document.getElementById('comment').value.trim();
+
+            // Hide previous messages
+            errorMsg.style.display = 'none';
+            successMsg.style.display = 'none';
+
+            if (!comment) {
+                errorMsg.textContent = 'Please enter a comment.';
+                errorMsg.style.display = 'block';
+                return;
+            }
+
+			if (response.ok) {
+				successMsg.textContent = 'Comment posted successfully!';
+				successMsg.style.display = 'block';
+			}
+			
+            catch (error) {
+                errorMsg.textContent = 'An error occurred. Please try again.';
+                errorMsg.style.display = 'block';
+            }
+        });
+    </script>
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/business.js') }}"></script>
+{% endblock %}

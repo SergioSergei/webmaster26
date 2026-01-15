@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}About Us – City of Miami{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}" />
+{% endblock %}
+
+{% block content %}
+<main class="about-page">
+
+  <!-- HERO -->
+  <section class="about-hero">
+    <img
+      src="{{ url_for('static', filename='images/about-hero.png') }}"
+      alt="Child in wheelchair"
+      class="about-hero-img"
+    />
+
+    <h1 class="about-title">ABOUT US</h1>
+  </section>
+
+  <!-- CONTENT CARD -->
+  <section class="about-card">
+    <div class="about-card-inner">
+
+      <div class="about-text">
+        <h2>OUR RATIONAL</h2>
+        <p>
+          Did you know that Miami is the second least-connected large city in the U.S.?
+		  It is our goal to help fix this issue by teaching Miami residents about all the
+		  wonderful resources in our city. In this way, we encourage Miami residents to 
+		  interact with each other and the organizations that make Miami special, 
+		  strengthening our connections. 
+        </p>
+
+        <h3>Our Plan</h3>
+        <ul>
+          <li>Step 1: Compile some starting resources for people to discover.</li>
+          <li>Step 2: Miami residents share new resources through our website.</li>
+          <li>Step 3: Miami residents become more connected over the their shared experiences. </li>
+          <li>Step 4: People obtain the support they need to better themselves and Miami.</li>
+        </ul>
+		
+		<h3>We hope to make everyone who has struggled in Miami feel included.</h3>
+      </div>
+
+      <div class="about-image">
+        <img
+          src="{{ url_for('static', filename='images/about-side.webp') }}"
+          alt="Family with wheelchair"
+        />
+      </div>
+
+    </div>
+
+</main>
+{% endblock %}

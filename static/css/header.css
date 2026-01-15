@@ -1,0 +1,31 @@
+.site-header {
+    background: #7b7b7b;
+    height: 40px;
+  }
+  
+  .header-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+  }
+  
+  .header-left img {
+    height: 18px;
+  }
+  
+  .header-nav {
+    display: flex;
+    gap: 22px;
+  }
+  
+  .header-nav a {
+    color: #fff;
+    font-size: 11px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  

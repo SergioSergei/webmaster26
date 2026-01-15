@@ -1,0 +1,145 @@
+/* =========================
+   GLOBAL NORMALIZATION
+   ========================= */
+
+   html, body {
+    margin: 0;
+    padding: 0;
+    background: #f6efea; /* SAME as home page */
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: #113033;
+  }
+  
+  /* =========================
+     PAGE WRAPPER
+     ========================= */
+  
+  .about-page {
+    background: #f6efea;
+    min-height: 100vh;
+    padding-bottom: 80px;
+  }
+  
+  /* =========================
+     HERO
+     ========================= */
+  
+  .about-hero {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 48px 18px 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  
+  .about-hero-img {
+    width: 260px;
+    max-width: 100%;
+    display: block;
+  }
+  
+  .about-title {
+    margin-top: 56px;
+    font-size: 44px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    color: #6fb6bb;
+    line-height: 1;
+  }
+  
+  /* =========================
+     CONTENT CARD
+     ========================= */
+  
+  .about-card {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 18px;
+  }
+  
+  .about-card-inner {
+    background: #f3eadb;
+    border-radius: 6px;
+    padding: 28px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 28px;
+  }
+  
+  /* =========================
+     TEXT
+     ========================= */
+  
+  .about-text h2 {
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+  }
+  
+  .about-text p {
+    font-size: 12px;
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+  
+  .about-text h3 {
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  
+  .about-text ul {
+    padding-left: 16px;
+    margin: 0;
+  }
+  
+  .about-text li {
+    font-size: 12px;
+    margin-bottom: 6px;
+  }
+  
+  /* =========================
+     SIDE IMAGE
+     ========================= */
+  
+  .about-image img {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+  }
+  
+  /* =========================
+     QUOTE
+     ========================= */
+  
+  .about-quote {
+    text-align: center;
+    font-size: 11px;
+    font-style: italic;
+    margin: 18px auto 0;
+    color: #444;
+    max-width: 700px;
+  }
+  
+  /* =========================
+     RESPONSIVE
+     ========================= */
+  
+  @media (max-width: 760px) {
+    .about-hero {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .about-title {
+      margin-top: 20px;
+    }
+  
+    .about-card-inner {
+      grid-template-columns: 1fr;
+    }
+  }
+  
